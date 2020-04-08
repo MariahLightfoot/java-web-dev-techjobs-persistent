@@ -49,4 +49,11 @@ public class SkillController {
             return "redirect:../";
         }
     }
+
+    @GetMapping
+    public String displayAllSkills(Model model) {
+
+        model.addAttribute("skills", skillRepository.findAll());
+        return "skills/index";
+    }
 }
