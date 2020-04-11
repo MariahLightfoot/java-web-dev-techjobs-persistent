@@ -10,8 +10,8 @@ import java.util.List;
 @Entity
 public class Skill extends AbstractEntity {
 
-    @NotBlank(message = "Skill cannot be blank!")
     @Size(min = 1, max = 150, message = "Skill must be between 1 and 150 characters!")
+    @NotBlank(message = "Skill cannot be blank!")
     private String description;
 
     @ManyToMany(mappedBy = "skills")
@@ -31,3 +31,4 @@ public class Skill extends AbstractEntity {
         return jobs;
     }
 }
+

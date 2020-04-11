@@ -65,6 +65,7 @@ public class HomeController {
         }
 
         Optional<Employer> optEmployer = employerRepository.findById(employerId);
+
         if (optEmployer.isPresent()) {
             Employer employer = optEmployer.get();
             newJob.setEmployer(employer);
